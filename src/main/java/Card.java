@@ -1,3 +1,4 @@
+
 public class Card {
   private String suit;
   private String symbol;
@@ -5,7 +6,7 @@ public class Card {
   private static final String ANSI_RESET = "\033[1;37m";
   private static final String ANSI_RED = "\u001B[31m";
   private static final String ANSI_BLACK = "\u001B[30m";
-  private static final String ANSI_BACKGROUND = "\033[47m";
+  private static final String ANSI_BACKGROUND = "\033[43m";
 
   public Card(String suit, String symbol, int value) {
     this.suit = suit;
