@@ -12,7 +12,6 @@ public class Main {
     }
     System.out.println("ByValue ^^ --------------");
 
-
     cardGame.shuffleDeck();
     ArrayList<Card> shuffledDeck = cardGame.getDeck();
     for (Card card : shuffledDeck) {

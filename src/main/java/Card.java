@@ -3,10 +3,6 @@ public class Card {
   private String suit;
   private String symbol;
   private int value;
-  private static final String ANSI_RESET = "\033[1;37m";
-  private static final String ANSI_RED = "\u001B[31m";
-  private static final String ANSI_BLACK = "\u001B[30m";
-  private static final String ANSI_BACKGROUND = "\033[43m";
 
   public Card(String suit, String symbol, int value) {
     this.suit = suit;
@@ -29,9 +25,9 @@ public class Card {
   @Override
   public String toString() {
     if (suit.equals("♥") || suit.equals("♦")) {
-    return ANSI_BACKGROUND + ANSI_RED + symbol + " of " + suit + " (Value: " + value + ")" + ANSI_RESET;
+    return Color.BACKGROUND.getColor() + Color.RED.getColor() + symbol + " of " + suit + " (Value: " + value + ")" + Color.RESET.getColor();
     } else {
-      return ANSI_BACKGROUND + ANSI_BLACK + symbol + " of " + suit + " (Value: " + value + ")" + ANSI_RESET;
+      return Color.BACKGROUND.getColor() + Color.BLACK.getColor() + symbol + " of " + suit + " (Value: " + value + ")" + Color.RESET.getColor();
     }
   }
 
