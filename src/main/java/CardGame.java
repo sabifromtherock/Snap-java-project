@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.stream.Collectors;
 
 public class CardGame {
   private String name;
@@ -27,5 +30,36 @@ public class CardGame {
         deckOfCards.add(new Card(suit, symbols[i], values[i]));
       }
     }
+  }
+
+  public Card dealCard() {
+    if (!deckOfCards.isEmpty()) {
+      Card card = deckOfCards.remove(0);
+      return card;
+    } else {
+      System.out.println("The deck is empty. Cannot deal any more cards.");
+      return null;
+    }
+  }
+
+
+  public ArrayList<Card> sortDeckInNumberOrder() {
+    deckOfCards = deckOfCards.stream()
+            .sorted((a, b) -> a.getValue() - b.getValue())
+            .collect(Collectors.toCollection(ArrayList::new));
+    return deckOfCards;
+  }
+
+  public ArrayList<Card> sortDeckIntoSuits() {
+    deckOfCards = deckOfCards.stream()
+            .sorted((a, b) -> a.getValue() - b.getValue())
+            .sorted((a, b) -> a.getSuit().compareTo(b.getSuit()))
+            .collect(Collectors.toCollection(ArrayList::new));
+    return deckOfCards;
+  }
+
+  public ArrayList<Card> shuffleDeck() {
+    Collections.shuffle(deckOfCards);
+    return deckOfCards;
   }
 }
