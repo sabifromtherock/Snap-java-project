@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.stream.Collectors;
 
 public class CardGame {
@@ -12,6 +11,7 @@ public class CardGame {
     this.deckOfCards = new ArrayList<>();
     initializeDeck();
   }
+
   public ArrayList<Card> getDeck() {
     return deckOfCards;
   }
@@ -41,7 +41,6 @@ public class CardGame {
       return null;
     }
   }
-
 
   public ArrayList<Card> sortDeckInNumberOrder() {
     deckOfCards = deckOfCards.stream()

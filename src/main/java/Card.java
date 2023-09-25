@@ -1,8 +1,8 @@
 
 public class Card {
-  private String suit;
-  private String symbol;
-  private int value;
+  private final String suit;
+  private final String symbol;
+  private final int value;
 
   public Card(String suit, String symbol, int value) {
     this.suit = suit;
@@ -25,9 +25,9 @@ public class Card {
   @Override
   public String toString() {
     if (suit.equals("♥") || suit.equals("♦")) {
-    return Color.BACKGROUND.getColor() + Color.RED.getColor() + symbol + " of " + suit + " (Value: " + value + ")" + Color.RESET.getColor();
+      return Color.RED.getColor() + symbol + " of " + suit + " (Value: " + value + ")" + Color.RESET.getColor();
     } else {
-      return Color.BACKGROUND.getColor() + Color.BLACK.getColor() + symbol + " of " + suit + " (Value: " + value + ")" + Color.RESET.getColor();
+      return Color.BLACK.getColor() + symbol + " of " + suit + " (Value: " + value + ")" + Color.RESET.getColor();
     }
   }
 
