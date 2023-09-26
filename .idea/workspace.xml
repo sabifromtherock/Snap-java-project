@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c51eaad3-c741-4c1f-8300-757c6c8d66d4" name="Changes" comment="added Card class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SnapGame.java" afterDir="false" />
+    <list default="true" id="c51eaad3-c741-4c1f-8300-757c6c8d66d4" name="Changes" comment="added 2 players to the game">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SnapGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SnapGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "cardGame",
+    "git-widget-placeholder": "player",
     "last_opened_file_path": "/home/fabika/development/java/snap-java-project",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -113,12 +113,49 @@
       <option name="project" value="LOCAL" />
       <updated>1695311550619</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added players color">
+      <option name="closed" value="true" />
+      <created>1695737732892</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695737732892</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added Player class">
+      <option name="closed" value="true" />
+      <created>1695737829286</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695737829286</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added 2 players to the game">
+      <option name="closed" value="true" />
+      <created>1695739990172</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695739990172</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial setup" />
     <MESSAGE value="added Card class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Card class" />
+    <MESSAGE value="added players color" />
+    <MESSAGE value="added Player class" />
+    <MESSAGE value="added 2 players to the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 2 players to the game" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

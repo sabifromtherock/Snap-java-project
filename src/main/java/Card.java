@@ -25,9 +25,9 @@ public class Card {
   @Override
   public String toString() {
     if (suit.equals("♥") || suit.equals("♦")) {
-      return Color.RED.getColor() + symbol + " of " + suit + " (Value: " + value + ")" + Color.RESET.getColor();
+      return Color.RED.getColor() + symbol + " of " + suit + Color.RESET.getColor();
     } else {
-      return Color.BLACK.getColor() + symbol + " of " + suit + " (Value: " + value + ")" + Color.RESET.getColor();
+      return Color.BLACK.getColor() + symbol + " of " + suit + Color.RESET.getColor();
     }
   }
 
