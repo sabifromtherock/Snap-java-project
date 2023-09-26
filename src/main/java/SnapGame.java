@@ -3,9 +3,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class SnapGame extends CardGame {
-  private Player player1;
-  private Player player2;
-  boolean isTimeElapsed = false;
+  private final Player player1;
+  private final Player player2;
   int currentPlayer = 1;
 
   public SnapGame(String name, Player player1, Player player2) {
@@ -18,14 +17,15 @@ public class SnapGame extends CardGame {
     String previousCardSymbol = null;
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Welcome to Snap! Press Enter to take your turn.");
+    System.out.println("\nWelcome to Snap! Press Enter to take your turn.");
 
     while (true) {
       scanner.nextLine();
       Card currentCard = dealCard();
 
       if (currentCard == null) {
-        System.out.println(Color.RED.getColor() + "The deck is empty. Game over.");
+        System.out.println(Color.RED.getColor() + "The deck is empty. Game over." + Color.RESET.getColor());
+        System.exit(0); //force to exit the application
         break;
       }
 
@@ -44,28 +44,22 @@ public class SnapGame extends CardGame {
           @Override
           public void run() {
             System.out.println(Color.RED.getColor() + "Time's up! " + Color.GREEN.getColor() + (currentPlayer == 1 ? player2.getName() : player1.getName()) + " wins.");
-            isTimeElapsed = true;
             timer.cancel();
+            System.exit(0); //force to exit the application
           }
         };
         timer.schedule(snapTask, 4000);
-        
-        System.out.println(isTimeElapsed);
-        if (isTimeElapsed) {
-          System.out.println(Color.RED.getColor() + "Time's up! " + Color.GREEN.getColor() + (currentPlayer == 1 ? player2.getName() : player1.getName()) + " wins.");
-          break;
-        }
 
         String userInput = scanner.nextLine();
         timer.cancel();
 
-        if (userInput.equalsIgnoreCase("snap")) {
+        if ("snap".equalsIgnoreCase(userInput)) {
           System.out.println(Color.GREEN.getColor() + "Snap! " + (currentPlayer == 1 ? player1.getName() : player2.getName()) + " wins!");
-          break;
         } else {
           System.out.println(Color.RED.getColor() + "You lost! " + Color.GREEN.getColor() + (currentPlayer == 1 ? player2.getName() : player1.getName()) + " wins!");
-          break;
         }
+        System.exit(0); //force to exit the application
+        break;
       }
 
       previousCardSymbol = currentCard.getSymbol();
@@ -74,6 +68,4 @@ public class SnapGame extends CardGame {
 
     scanner.close();
   }
-
-
 }

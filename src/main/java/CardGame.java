@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 
 public class CardGame {
-  private String name;
+  private final String name;
   private ArrayList<Card> deckOfCards;
 
   public CardGame(String name) {
@@ -34,8 +35,7 @@ public class CardGame {
 
   public Card dealCard() {
     if (!deckOfCards.isEmpty()) {
-      Card card = deckOfCards.remove(0);
-      return card;
+      return deckOfCards.remove(0);
     } else {
       System.out.println("The deck is empty. Cannot deal any more cards.");
       return null;
@@ -44,21 +44,20 @@ public class CardGame {
 
   public ArrayList<Card> sortDeckInNumberOrder() {
     deckOfCards = deckOfCards.stream()
-            .sorted((a, b) -> a.getValue() - b.getValue())
+            .sorted(Comparator.comparingInt(Card::getValue))
             .collect(Collectors.toCollection(ArrayList::new));
     return deckOfCards;
   }
 
   public ArrayList<Card> sortDeckIntoSuits() {
     deckOfCards = deckOfCards.stream()
-            .sorted((a, b) -> a.getValue() - b.getValue())
-            .sorted((a, b) -> a.getSuit().compareTo(b.getSuit()))
+            .sorted(Comparator.comparingInt(Card::getValue))
+            .sorted(Comparator.comparing(Card::getSuit))
             .collect(Collectors.toCollection(ArrayList::new));
     return deckOfCards;
   }
 
-  public ArrayList<Card> shuffleDeck() {
+  public void shuffleDeck() {
     Collections.shuffle(deckOfCards);
-    return deckOfCards;
   }
 }
