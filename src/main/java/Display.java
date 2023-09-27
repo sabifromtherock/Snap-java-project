@@ -30,7 +30,16 @@ public class Display {
   }
 
   public static String getPlayerName(String prompt) {
-    System.out.print(prompt);
-    return scanner.nextLine();
+    String playerName = "";
+    while (playerName.isEmpty()) {
+      System.out.print(prompt);
+      playerName = scanner.nextLine();
+
+      if (playerName.isEmpty()) {
+        System.out.println("Please enter a non-empty name.");
+      }
+    }
+    return playerName;
   }
+
 }

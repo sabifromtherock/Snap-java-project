@@ -48,7 +48,7 @@ public class SnapGame extends CardGame {
             System.exit(0); //force to exit the application
           }
         };
-        timer.schedule(snapTask, 4000);
+        timer.schedule(snapTask, 2000);
 
         String userInput = scanner.nextLine();
         timer.cancel();
