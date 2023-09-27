@@ -63,6 +63,6 @@ Follow these steps to clone the project from GitHub and open it on your local ma
 1. Start the game by running the `Main` class.
 2. Choose options from the main menu:
     - Rules: Display the rules of the game.
-    - Start game: Enter player names and choose a dealer.
+    - Start game: Enter player names and start the game.
 3. Players take turns drawing cards by pressing Enter.
 4. If two consecutive cards have the same symbol, type 'snap' within 2 seconds to win the round.
