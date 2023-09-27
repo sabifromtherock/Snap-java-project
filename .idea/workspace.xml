@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c51eaad3-c741-4c1f-8300-757c6c8d66d4" name="Changes" comment="added 2 players to the game">
-      <change beforePath="$PROJECT_DIR$/src/main/java/SnapGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SnapGame.java" afterDir="false" />
+    <list default="true" id="c51eaad3-c741-4c1f-8300-757c6c8d66d4" name="Changes" comment="added non-empty check on player name input">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Display.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -132,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695739990172</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added non-empty check on player name input">
+      <option name="closed" value="true" />
+      <created>1695821289758</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695821289758</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,7 +154,8 @@
     <MESSAGE value="added players color" />
     <MESSAGE value="added Player class" />
     <MESSAGE value="added 2 players to the game" />
-    <option name="LAST_COMMIT_MESSAGE" value="added 2 players to the game" />
+    <MESSAGE value="added non-empty check on player name input" />
+    <option name="LAST_COMMIT_MESSAGE" value="added non-empty check on player name input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
