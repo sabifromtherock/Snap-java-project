@@ -4,10 +4,7 @@ public class Display {
   private static final Scanner scanner = new Scanner(System.in);
 
   public static int showMenuAndGetChoice() {
-    System.out.println("Welcome to Snap!\n");
-    System.out.println("Options:");
-    System.out.println("1 - Rules");
-    System.out.println("2 - Start game\n");
+    System.out.println("Welcome to Snap!\n\nOptions:\n1 - Rules\n2 - Start game\n");
 
     int choice = -1;
     while (choice < 1 || choice > 2) {
@@ -24,13 +21,19 @@ public class Display {
   }
 
   public static void displayRules() {
-    System.out.println("Snap Rules:");
-    System.out.println(
-            "1. Press Enter to take your turn.\n2. A new card is dealt each turn.\n3. Win by typing 'snap' within 2 seconds\n   when two cards in a row have the same symbol.\n   Otherwise, you lose.\n");
+    System.out.println("Snap Rules:\n1. Press Enter to take your turn.\n2. A new card is dealt each turn.\n3. Win by typing 'snap' within 2 seconds\n   when two cards in a row have the same symbol.\n   Otherwise, you lose.\n");
   }
 
   public static String getPlayerName(String prompt) {
-    System.out.print(prompt);
-    return scanner.nextLine();
+    String playerName = "";
+    while (playerName.isEmpty()) {
+      System.out.print(prompt);
+      playerName = scanner.nextLine();
+
+      if (playerName.isEmpty()) {
+        System.out.println("Please enter a non-empty name.");
+      }
+    }
+    return playerName;
   }
 }
